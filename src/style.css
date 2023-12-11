@@ -1,0 +1,378 @@
+body {
+    height: 100svh;
+    background-image: url("../asset-resource/restaurant.webp");
+    margin: 0;
+    color: white;
+    box-shadow: inset 0 0 0 1000px rgba(30, 30, 30, 0.6);
+}
+
+
+
+
+
+/* HEADER */
+header h1 { 
+    font-size: 3rem;
+}
+li {
+    font-size: 2rem;
+    margin-right: 10px;
+    text-align: center;
+}
+li:active {
+    color: lightgrey;
+}
+
+li:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    cursor: pointer;
+}
+/* HEADER */
+
+.header {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+}
+.header, footer {
+    background-color: rgba(66, 41, 41,  0.9);
+
+}
+
+.logo {
+    margin: 0;
+    justify-self: end;
+}
+
+.nav {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: start;
+}
+
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: fit-content; 
+    text-align: center;
+}
+
+/* Home */
+
+
+
+.home {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.home h1, #content h2 {
+    text-align: center;
+    background-color: rgba(66, 41, 41, 0.9);
+    margin-top: 5%;
+}
+.food-cards-container {
+    justify-self: center;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25px;
+}
+
+.food-card {
+    width: 33vh;
+    height: 33vh;
+    background-color: white;
+}
+
+
+
+iframe {
+    width: 230px;
+    height: 230px;
+    border: none;
+}
+
+.food-card:nth-child(1) {
+    background-image: url("../asset-resource/menu.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.food-card:nth-child(2) {
+    background-image: url("../asset-resource/cityView.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.food-card:nth-child(3) {
+    background-image: url("../asset-resource/table.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* Menu section */
+
+.menu-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.menu-card {
+    margin: 1vw;
+    width: 30vw;
+    height: 30vw;
+    background-color: white;
+    margin-top: 10svh;
+}
+
+.menu-card h1 {
+    color: white;
+    background-color: rgba(66, 41, 41, 0.9);
+    padding: 5%;
+    margin: 0;
+}
+
+.menu-card:nth-child(1) {
+    background-image: url("../asset-resource/carbonacci.webp");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.menu-card:nth-child(2) {
+    background-image: url("../asset-resource/lasagna.webp");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.menu-card:nth-child(3) {
+    background-image: url("../asset-resource/fetuccine.webp");
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+h1 {
+    text-align: center;
+    
+}
+
+/* RESERVATION */
+form {
+    all: unset;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    align-items: center;
+    padding: 3%;
+}
+
+input[type="text"] {
+    width: 10vw;
+}
+
+input[type="number"] {
+    width: 2vw;
+    justify-self: start;
+}
+
+input[type="datetime-local"] {
+    width: fit-content;
+    justify-self: center;
+}
+
+.grid {
+    height: 10svh;
+    width: 20vw;
+    display: grid;
+    justify-items: center;
+    align-items: start;
+    grid-template-rows: repeat(auto-fit, minmax(30px, 40px));
+
+}
+
+label input[type="number"] {
+    justify-self: center;
+    width: 5vw;
+}
+
+
+.submit {
+    width: 10vw;
+    height: 2vw;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservations {
+    margin: auto;
+    margin-top: 10svh;
+    height: calc(fit-content + 5vh);
+    width: 30vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: rgb(30, 30, 30);
+    border-radius: 30px;
+
+
+}
+
+textarea {
+    height: 10svh;
+    width: 20vw;
+    resize: none;
+}
+
+/* Small Screens */
+
+@media (max-width: 500px) {
+    body {
+        zoom: 40%;
+        font-size: 1.5rem;
+        box-shadow: none;
+    }
+    .home {
+        margin-top: 10%;
+    }
+    h1, li, h2 {
+        font-size: 2.5rem;
+    }
+    iframe {
+        
+        width: 50%;
+        height: 300px;
+
+    }
+    .food-cards-container {
+        margin-bottom: 10svh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .food-card {
+        width: 100vh;
+        height: 40vh;
+        background-color: white;
+    }
+
+    .food-card:nth-child(1) {
+        background-position-y: -60%;
+    }
+
+    .menu-cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+    }
+    .menu-card {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100vh;
+        height: 60vh;
+        margin-top: 10%;
+    }
+
+    .menu-card h1 {
+        color: white;
+        background-color: rgba(66, 41, 41, 0.9);
+        padding: 1%;
+        margin: 0;
+        height: fit-content;
+    }
+
+
+    form {
+        all: unset;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        align-items: center;
+        font-size: 5rem;
+        width: 100%;
+    }
+    
+    input[type="text"] {
+        width: 80%;
+        height: 5svh;
+
+    }
+    
+    input[type="number"] {
+        width: 80%;
+        justify-self: start;
+    }
+    
+    input[type="datetime-local"] {
+        width: fit-content;
+        justify-self: center;
+        font-size: 2rem;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .grid {
+        height: fit-content;
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: start;
+        grid-template-rows: repeat(auto-fit, minmax(30px, 1fr));
+    
+    }
+    
+    label input[type="number"] {
+        justify-self: center;
+        width: 50%;
+        height: 5svh;
+    }
+    
+    
+    .submit {
+        width: fit-content;
+        height: fit-content;
+        font-size: 5rem;
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .reservations {
+        margin: auto;
+        margin-top: 10svh;
+        height: calc(fit-content + 5vh);
+        width: 90%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        background-color: rgb(30, 30, 30);
+        border-radius: 30px;
+        font-size: 3rem;
+    
+    }
+    
+    textarea {
+        height: 200px;
+        width: 100vw;
+        resize: none;
+    }
+    
+}
